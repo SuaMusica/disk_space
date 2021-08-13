@@ -2,19 +2,25 @@ package de.appgewaltig.disk_space
 
 import android.os.Environment
 import android.os.StatFs
+import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
+import android.content.Context
 
-class DiskSpacePlugin: MethodCallHandler {
-  companion object {
-    @JvmStatic
-    fun registerWith(registrar: Registrar) {
-      val channel = MethodChannel(registrar.messenger(), "disk_space")
-      channel.setMethodCallHandler(DiskSpacePlugin())
-    }
+class DiskSpacePlugin: MethodCallHandler, FlutterPlugin {
+  private var channel: MethodChannel? = null
+  private val CHANNEL_NAME = "disk_space"
+  private var applicationContext: Context? = null
+  override fun onAttachedToEngine(binding: FlutterPlugin.FlutterPluginBinding) {
+    channel = MethodChannel(binding.binaryMessenger, CHANNEL_NAME)
+    applicationContext = binding.applicationContext
+    channel?.setMethodCallHandler(this)
+  }
+
+  override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
+    channel?.setMethodCallHandler(null)
   }
 
   private fun getFreeDiskSpace(): Double {
@@ -49,4 +55,6 @@ class DiskSpacePlugin: MethodCallHandler {
       else -> result.notImplemented()
     }
   }
+
+
 }
