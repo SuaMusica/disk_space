@@ -1,7 +1,12 @@
-library disk_space;
+import 'package:disk_space_platform_interface/disk_space_platform_interface.dart';
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+class DiskSpace {
+  static Future<String?> platformVersion() =>
+      DiskSpacePlatform.instance.platformVersion();
+
+  static Future<double?> getFreeDiskSpace() =>
+      DiskSpacePlatform.instance.getFreeDiskSpace();
+
+  static Future<double?> getTotalDiskSpace() =>
+      DiskSpacePlatform.instance.getTotalDiskSpace();
 }

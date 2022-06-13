@@ -50,6 +50,34 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.5"
+  disk_space:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "0.0.1"
+  disk_space_android:
+    dependency: transitive
+    description:
+      path: "../../disk_space_android"
+      relative: true
+    source: path
+    version: "0.0.1"
+  disk_space_ios:
+    dependency: transitive
+    description:
+      path: "../../disk_space_ios"
+      relative: true
+    source: path
+    version: "0.0.1"
+  disk_space_platform_interface:
+    dependency: transitive
+    description:
+      path: "../../disk_space_platform_interface"
+      relative: true
+    source: path
+    version: "0.0.1"
   fake_async:
     dependency: transitive
     description:
@@ -109,6 +137,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.1"
+  plugin_platform_interface:
+    dependency: transitive
+    description:
+      name: plugin_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.2"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -165,3 +200,4 @@ packages:
     version: "2.1.2"
 sdks:
   dart: ">=2.17.0 <3.0.0"
+  flutter: ">=2.5.0"
