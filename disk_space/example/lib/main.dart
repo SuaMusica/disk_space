@@ -55,7 +55,7 @@ class MyAppState extends State<MyApp> {
               child: Text('Free Space on device (MB): $_diskSpace\n'),
             ),
             Center(
-              child: Text('TotalSpace on device (MB): $_totalSpace\n'),
+              child: Text('Total Space on device (MB): $_totalSpace\n'),
             ),
           ],
         ),
