@@ -9,4 +9,9 @@ class DiskSpace {
 
   static Future<double?> getTotalDiskSpace() =>
       DiskSpacePlatform.instance.getTotalDiskSpace();
+
+  static Future<double?> getFreeSdSpace() =>
+      DiskSpacePlatform.instance.getFreeSdSpace();
+
+  static Future<bool> hasSdCard() => DiskSpacePlatform.instance.hasSdCard();
 }

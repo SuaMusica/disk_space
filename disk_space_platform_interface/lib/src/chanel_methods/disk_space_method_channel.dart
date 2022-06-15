@@ -28,4 +28,17 @@ class MethodChannelDiskSpace extends DiskSpacePlatform {
         await methodChannel.invokeMethod('getTotalDiskSpace');
     return totalDiskSpace;
   }
+
+  @override
+  Future<double?> getFreeSdSpace() async {
+    final double? freeSdSpace =
+        await methodChannel.invokeMethod('getFreeSdSpace');
+    return freeSdSpace;
+  }
+
+  @override
+  Future<bool> hasSdCard() async {
+    final bool hasSd = await methodChannel.invokeMethod('hasSdCard');
+    return hasSd;
+  }
 }

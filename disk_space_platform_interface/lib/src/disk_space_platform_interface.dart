@@ -33,4 +33,12 @@ abstract class DiskSpacePlatform extends PlatformInterface {
   Future<double?> getTotalDiskSpace() {
     throw UnimplementedError('getTotalDiskSpace() has not been implemented.');
   }
+
+  Future<double?> getFreeSdSpace() {
+    throw UnimplementedError('getFreeSdSpace() has not been implemented.');
+  }
+
+  Future<bool> hasSdCard() {
+    throw UnimplementedError('hasSdCard() has not been implemented.');
+  }
 }

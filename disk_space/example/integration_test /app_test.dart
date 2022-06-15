@@ -12,8 +12,8 @@ void main() {
       FlutterError.onError = (_) => Null;
       final textFreeSpace = find.text('Free Space on device (MB): 0.0\n');
       final textTotalSpace = find.text('Total Space on device (MB): 0.0\n');
-      expect(textFreeSpace, findsNWidgets(1));
-      expect(textTotalSpace, findsNWidgets(1));
+      expect(textFreeSpace, findsOneWidget);
+      expect(textTotalSpace, findsOneWidget);
 
       await tester.pumpAndSettle();
 

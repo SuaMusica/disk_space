@@ -13,6 +13,8 @@ void main() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {
       if (methodCall.method == 'platformVersion') {
         return '42';
+      } else if (methodCall.method == 'hasSdCard') {
+        return false;
       } else {
         return 42.0;
       }
@@ -33,5 +35,13 @@ void main() {
 
   test('getTotalDiskSpace', () async {
     expect(await platform.getTotalDiskSpace(), 42);
+  });
+
+  test('getFreeSdSpace', () async {
+    expect(await platform.getFreeSdSpace(), 42);
+  });
+
+  test('hasSdCard', () async {
+    expect(await platform.hasSdCard(), false);
   });
 }
