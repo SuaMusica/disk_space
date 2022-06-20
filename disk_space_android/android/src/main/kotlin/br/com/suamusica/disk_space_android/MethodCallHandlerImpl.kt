@@ -33,8 +33,6 @@ internal class MethodCallHandlerImpl : MethodCallHandler{
         this.activity = activity
     }
 
-    
-
     private fun getFreeDiskSpace(): Double {
         val stat = StatFs(Environment.getExternalStorageDirectory().path)
 
