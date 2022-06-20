@@ -60,9 +60,11 @@ packages:
   disk_space_platform_interface:
     dependency: transitive
     description:
-      path: "../../disk_space_platform_interface"
-      relative: true
-    source: path
+      path: disk_space_platform_interface
+      ref: "enhancement/#1-disk_space"
+      resolved-ref: "6fdb322cdfbdf2d79becf5758d4f9a817bb7922a"
+      url: "https://github.com/SuaMusica/disk_space.git"
+    source: git
     version: "0.0.1"
   fake_async:
     dependency: transitive

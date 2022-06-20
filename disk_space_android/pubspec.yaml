@@ -12,7 +12,14 @@ dependencies:
     sdk: flutter
   plugin_platform_interface: ^2.0.2
   disk_space_platform_interface:
-    path: ../disk_space_platform_interface
+    git:
+      url: https://github.com/SuaMusica/disk_space.git
+      path: disk_space_platform_interface/
+      ref: enhancement/#1-disk_space
+
+# dependencies_overrides:
+#   disk_space_platform_interface:
+#     path: ../disk_space_platform_interface
 
 dev_dependencies:
   flutter_test:

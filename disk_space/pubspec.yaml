@@ -21,11 +21,28 @@ dependencies:
     sdk: flutter
 
   disk_space_platform_interface:
-    path: ../disk_space_platform_interface
+    git:
+      url: https://github.com/SuaMusica/disk_space.git
+      path: disk_space_platform_interface/
+      ref: enhancement/#1-disk_space
   disk_space_android:
-    path: ../disk_space_android
+    git:
+      url: https://github.com/SuaMusica/disk_space.git
+      path: disk_space_android/
+      ref: enhancement/#1-disk_space
   disk_space_ios:
-    path: ../disk_space_ios
+    git:
+      url: https://github.com/SuaMusica/disk_space.git
+      path: disk_space_ios/
+      ref: enhancement/#1-disk_space
+
+# dependencies_overrides:
+#   disk_space_platform_interface:
+#     path: ../disk_space_platform_interface
+#   disk_space_android:
+#     path: ../disk_space_android
+#   disk_space_ios:
+#     path: ../disk_space_ios
 
 dev_dependencies:
   flutter_test:
