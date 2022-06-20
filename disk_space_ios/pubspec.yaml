@@ -1,7 +1,7 @@
 name: disk_space_ios
 description: A new Flutter plugin project.
 version: 0.0.1
-homepage:
+publish_to: none
 
 environment:
   sdk: ">=2.17.0 <3.0.0"
@@ -10,12 +10,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  plugin_platform_interface: ^2.0.2
+  disk_space_platform_interface:
+    git:
+      url: https://github.com/SuaMusica/disk_space.git
+      path: disk_space_platform_interface/
+      ref: enhancement/#1-disk_space
+
+# dependencies_overrides:
+#   disk_space_platform_interface:
+#     path: ../disk_space_platform_interface
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  plugin_platform_interface: ^2.0.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
