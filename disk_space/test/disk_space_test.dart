@@ -26,11 +26,17 @@ void main() {
   });
 
   test('getPlatformVersion', () async {
-    expect(await platform.platformVersion(), '42');
+    expect(
+      await platform.platformVersion(),
+      '42',
+    );
   });
 
   test('getFreeDiskSpace', () async {
-    expect(await platform.getFreeDiskSpace(), 42);
+    expect(
+      await platform.getFreeDiskSpace(),
+      42,
+    );
   });
 
   test('getTotalDiskSpace', () async {
@@ -38,10 +44,16 @@ void main() {
   });
 
   test('getFreeSdSpace', () async {
-    expect(await platform.getFreeSdSpace(), 42);
+    expect(
+      await platform.getFreeSdSpace(),
+      42,
+    );
   });
 
   test('hasSdCard', () async {
-    expect(await platform.hasSdCard(), false);
+    expect(
+      await platform.hasSdCard(),
+      false,
+    );
   });
 }
